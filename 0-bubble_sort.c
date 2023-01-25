@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "sort.h"
 
 /**
@@ -14,6 +15,11 @@ void bubble_sort(int *array, size_t size)
 	int flag;
 	int temp;
 
+	if (size < 2)
+	{
+		print_aaray(array, size);
+		exit(EXIT_SUCCESS);
+	}
 	temp = 0;
 	for (i = 0; i < (size - 1); i++)
 	{
@@ -30,6 +36,9 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 		if (flag == 0)
+		{
+			print_array(array, size);
 			break;
+		}
 	}
 }
