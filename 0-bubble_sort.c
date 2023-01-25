@@ -15,11 +15,6 @@ void bubble_sort(int *array, size_t size)
 	int flag;
 	int temp;
 
-	if (size < 2)
-	{
-		print_aaray(array, size);
-		exit(EXIT_SUCCESS);
-	}
 	temp = 0;
 	for (i = 0; i < (size - 1); i++)
 	{
